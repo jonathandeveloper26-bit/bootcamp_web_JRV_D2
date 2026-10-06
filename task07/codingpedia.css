@@ -17,10 +17,15 @@ body {
 
 
 .main {
-    flex-grow: 0 0 80%;
+    flex: 0 0 80%;
     box-sizing: border-box;
 }
 
 .aside {
     flex: 1;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
 }
