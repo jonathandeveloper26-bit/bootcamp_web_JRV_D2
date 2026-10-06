@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CodingPedia</title>
+        <style>
+            textarea.code {
+                width: 100%;
+                height: 100px;
+                text-align: left;
+                padding: 5px;
+
+            }
+
+            table, th, td {
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <header>
+            <h1>Welcome to Codepedia!</h1>
+            <div id = "top-header">
+                <div id = "logo">
+                    <img src="./assets/logo.svg" alt="My Logo" width="50" height="50">
+                </div>
+            </div>
+            <nav>
+                <div id= "menu">
+                    <ul>
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="./index.html">Index</a></li>
+                        <li><a href="./php.html">PHP</a></li>
+                        <li><a href="./sql.html">SQL</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <article>
+                <h2><abbr title="Structured Query Language">SQL</abbr></h2>
+                <p><cite>Structured Query Language (SQL) (pronounced /ˌɛsˌkjuˈɛl/ S-Q-L; or alternatively as /ˈsiːkwəl/ ⓘ "sequel") is a domain-specific language used to manage data, especially in a relational database management system (RDBMS). It is particularly useful in handling structured data, i.e., data incorporating relations among entities and variables.</cite> - Wikipedia</p>
+            </article>
+            <article>
+                <h2>Curricula</h2>
+                <table>
+                <caption>Course Planning</caption>
+                <tr>
+                    <th>Subject</th>
+                    <th>Description</th>
+                    <th>Grade Obtained</th>
+                </tr>
+                <tr>
+                    <td>SQL 101</td>
+                    <td>A quick introduction to the SQL Language</td>
+                    <td>18</td>
+                </tr>
+                <tr>
+                    <td>SQL Join</td>
+                    <td>Discovery of JOIN to combine rows from multiple tables</td>
+                    <td>13</td>
+                </tr>
+            </table></article>
+            <article>
+                <h2>My Thoughts</h2>
+                <ul>
+                    <li class="active"><p>SQL is the standard language for managing data in relational databases, where data lives in tables of rows and columns.</p></li>
+                    <li><p>SQL is declarative: you describe what data you want (e.g., SELECT name FROM students WHERE age > 18;) and the database figures out how to get it.</p></li>
+                    <li><p>SQL commands fall into a few families: querying (SELECT), changing data (INSERT, UPDATE, DELETE), defining structure (CREATE, ALTER, DROP), and controlling access (GRANT, REVOKE).</p></li>
+                    <li><p>Every database (MySQL, PostgreSQL, SQL Server, Oracle, SQLite) uses its own slightly different dialect, so SQL written for one usually needs small changes to run on another.</p></li>
+                </ul>
+            </article>
+            
+            <article>
+                <h2>Code Examples</h2>
+                <ul>
+                    <li class="active">
+                        <textarea readonly class="code">
+<p>CREATE TABLE students (
+    id      INTEGER PRIMARY KEY,
+    name    VARCHAR(50) NOT NULL,
+    age     INTEGER,
+    school  VARCHAR(50)
+);
+
+INSERT INTO students (id, name, age, school) VALUES
+    (1, 'Amina',  17, 'Arusha Secondary'),
+    (2, 'Baraka', 19, 'Moshi College'),
+    (3, 'Neema',  18, 'Arusha Secondary'),
+    (4, 'Juma',   16, 'Moshi College');</p>
+                        </textarea>
+                    </li>
+                    <li class="active">
+                        <textarea readonly class="code">
+<p>-- Every column, every row
+    SELECT * FROM students;
+
+    -- Only names and ages of students 18 or older, oldest first
+    SELECT name, age
+    FROM students
+    WHERE age >= 18
+    ORDER BY age DESC;
+
+    -- Count students per school
+    SELECT school, COUNT(*) AS total
+    FROM students
+    GROUP BY school;
+</p>
+                        </textarea>
+                    </li>
+                    
+                </ul>
+            </article>
+        </main>
+        <aside>
+            <p><cite>Peace is a lie, there is only passion.
+Through passion, I gain strength.
+Through strength, I gain power.
+Through power, I gain victory.
+Through victory, my chains are broken.
+The Force shall free me</cite> -The Sith Code</p>
+        </aside>
+        <footer>
+            <address>
+                Name: <a href="mailto:jonathan.developer26@gmail.com">Jonathan Vinton</a>.<br>
+                Address: 20 Rue Du Poituo, 94550 Chevilly-Larue
+                Contact: +1 (713) 501 8206
+            </address>
+        </footer>
+        
+    </body>
+</html>
